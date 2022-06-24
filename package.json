@@ -1,0 +1,36 @@
+{
+  "name": "BETMS",
+  "version": "1.0.0",
+  "description": "Backend Developer.\r Buatlah rest api untuk sebuah dashboard data yang hasil nya berupa api untuk di consume oleh frontend. Beserta Unitesting masing-masing api.\r Bahasa yang dipakai javascript. Express js. Database mysql,postgresql.\r Rest api terdiri (setiap endpoint tambahkan redis)\r /login : login(response sesuaikan)(middleware)\r /register : mendaftar (response sesuaikan) (middleware)\r /monitor/data : lihat data(response ada dibawah) (middleware)\r /user/profile : data profile user(response sesuaikan) (middleware)\r Field untuk user berisi : nama, email, nomor handphone, password, dll(boleh ditambahkan apa yang dibutuhkan)\r Skenario nya user mendaftar , verifikasi by email user, user login, lihat data, lihat data profile user, edit profile user. Jika user tidak verifikasi maka user gagal login.\r Untuk lihat data. Dari json (terlampir) mengembalikan response berupa data berdasarkan tanggal terbaru ke terlama. List pertama merupakan data paling baru.\r {\"response\":{\r \"total_data\":””(total keseluruhan data),\r \"docs\": [{\r \"created_at\": \"\",(formatnya: hari, tanggal bulan tahun dan jam ex: Senin, 20 Juni 2022 14:00:00\r \"content\": \"\",\r \"user_name\": \"\",\r \"author\": \"\",\r \"user_location\": \"\",\r \"user_profile_image_url_https\":\"\",\r \"retweet_count\":\"\",\r \"favorite_count\": \"\"\r }]\r }\r }\r Task ini diberikan waktu selama 4 hari sampai tanggal 24 juni pukul 18.00(jumat sore)\r Hasil ini dikirim kembali by email ke hana@tms.id. Atau setelah dikirm kabarkan hr transmediasosial. Jika ada yang ingin ditanyakan hubungi hr.\r Good luck!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyandoneil/BETMS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reyandoneil/BETMS/issues"
+  },
+  "homepage": "https://github.com/reyandoneil/BETMS#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.7.5",
+    "pg": "^8.7.3",
+    "redis": "^4.1.0",
+    "sequelize": "^6.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "sequelize-cli": "^6.4.1"
+  }
+}
